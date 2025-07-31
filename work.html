@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лесная Гавань | Премиум коттеджный посёлок</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 transition-colors duration-300 dark:bg-dark-900 dark:text-gray-200">
+  <button id="theme-toggle" class="fixed right-6 bottom-6 z-50 p-3 rounded-full bg-white shadow-lg dark:bg-dark-700">
+    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+  </button>
+  <header class="fixed w-full z-50 transition-all duration-500 glass">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-display font-bold text-primary-700 dark:text-primary-400">Лесная Гавань</div>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#about" class="nav-link">О посёлке</a>
+        <a href="#plots" class="nav-link">Участки</a>
+        <a href="#location" class="nav-link">Расположение</a>
+        <a href="#gallery" class="nav-link">Галерея</a>
+        <a href="#contacts" class="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition">Контакты</a>
+      </nav>
+      
+      <button class="md:hidden text-2xl" id="mobile-menu-button">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="md:hidden hidden absolute top-full left-0 w-full bg-white dark:bg-dark-800 py-4" id="mobile-menu">
+      <a href="#about" class="block px-6 py-2 hover:bg-gray-100 dark:hover:bg-dark-700">О посёлке</a>
+      <a href="#plots" class="block px-6 py-2 hover:bg-gray-100 dark:hover:bg-dark-700">Участки</a>
+      <a href="#location" class="block px-6 py-2 hover:bg-gray-100 dark:hover:bg-dark-700">Расположение</a>
+      <a href="#gallery" class="block px-6 py-2 hover:bg-gray-100 dark:hover:bg-dark-700">Галерея</a>
+      <a href="#contacts" class="block px-6 py-2 hover:bg-gray-100 dark:hover:bg-dark-700">Контакты</a>
+    </div>
+  </header>
+
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-black/30 dark:bg-black/50 z-10"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+  
+  <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
+       class="absolute w-full h-full object-cover" 
+       alt="Коттедж в лесной гавани">
+  
+  <div class="container mx-auto px-6 z-20 text-center">
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6">
+      <span class="inline-block" id="typed"></span>
+    </h1>
+    <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+      Экологичный коттеджный посёлок премиум-класса с охраняемой территорией
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#plots" class="px-8 py-4 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition transform hover:scale-105 shadow-lg">
+        Выбрать участок
+      </a>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+  <section id="about" class="py-20 bg-white dark:bg-dark-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-primary-600 font-semibold">Премиум уровень</span>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mt-2">Почему выбирают нас</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 dark:bg-dark-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-tree text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">Экология</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">
+            Чистейший воздух соснового бора, собственный парк и озёра на территории
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-dark-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-shield-alt text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">Безопасность</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">
+            Круглосуточная охрана, видеонаблюдение и система контроля доступа
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 dark:bg-dark-700 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+          <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-wifi text-2xl text-primary-600"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-center">Коммуникации</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center">
+            Все центральные коммуникации: свет, газ, вода, высокоскоростной интернет
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-20 grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf" 
+               class="absolute w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-8 text-white">
+            <h3 class="text-2xl font-bold mb-2">Развитая инфраструктура</h3>
+            <p>Детские площадки, фитнес-зона, магазины и кафе</p>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-display font-bold mb-6">Дополнительные преимущества</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <span>Собственная парковая зона с озёрами</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <span>Зона барбекю и отдыха у воды</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <span>Фитнес-тренажёры на свежем воздухе</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <span>Экологические тропы для прогулок</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <span>Подземная парковка для гостей</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plots" class="py-20 bg-white dark:bg-dark-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold">Участки в продаже</h2>
+        <p class="text-gray-600 dark:text-gray-300 mt-4">
+          Выберите свой идеальный участок в нашем посёлке
+        </p>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <button class="px-4 py-2 bg-primary-600 text-white rounded-full filter-btn active" data-filter="all">Все</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full filter-btn" data-filter="10">10 соток</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full filter-btn" data-filter="15">15 соток</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full filter-btn" data-filter="20">20+ соток</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full filter-btn" data-filter="water">У воды</button>
+        <button class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full filter-btn" data-filter="forest">У леса</button>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="plot-card bg-gray-50 dark:bg-dark-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-size="10" data-location="forest">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115" 
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            <div class="absolute top-4 right-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm">
+              Хит продаж
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Участок №15</h3>
+            <div class="flex items-center text-gray-600 dark:text-gray-300 mb-4">
+              <i class="fas fa-map-marker-alt mr-2 text-primary-600"></i>
+              <span>Секция "Лесная", у главного входа</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-primary-600"></i>
+                <span>10 соток</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-tree mr-2 text-primary-600"></i>
+                <span>У леса</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-primary-600">1 850 000 ₽</span>
+              <button class="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plot-card bg-gray-50 dark:bg-dark-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-size="15" data-location="water">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Участок №27</h3>
+            <div class="flex items-center text-gray-600 dark:text-gray-300 mb-4">
+              <i class="fas fa-map-marker-alt mr-2 text-primary-600"></i>
+              <span>Секция "Озёрная", у водоёма</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-primary-600"></i>
+                <span>15 соток</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-water mr-2 text-primary-600"></i>
+                <span>У воды</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-primary-600">2 750 000 ₽</span>
+              <button class="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="plot-card bg-gray-50 dark:bg-dark-700 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-size="20" data-location="forest">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" 
+                 class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+              Последний
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Участок №42</h3>
+            <div class="flex items-center text-gray-600 dark:text-gray-300 mb-4">
+              <i class="fas fa-map-marker-alt mr-2 text-primary-600"></i>
+              <span>Секция "Премиум", тихая зона</span>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-primary-600"></i>
+                <span>22 сотки</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-tree mr-2 text-primary-600"></i>
+                <span>У леса</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <span class="text-2xl font-bold text-primary-600">4 200 000 ₽</span>
+              <button class="px-4 py-2 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12 hidden" id="show-all-plots">
+        <button class="px-8 py-3 bg-white dark:bg-dark-700 border-2 border-primary-600 text-primary-600 rounded-full hover:bg-primary-50 dark:hover:bg-primary-900/20 transition">
+          Показать все участки (12)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="py-20 bg-gray-100 dark:bg-dark-700">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold">Идеальное расположение</h2>
+        <p class="text-gray-600 dark:text-gray-300 mt-4">
+          Всего 15 минут от города в экологически чистом районе
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-display font-bold mb-6">Преимущества локации</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <div>
+                <span class="font-semibold">15 км от центра города</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Удобная транспортная доступность</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <div>
+                <span class="font-semibold">Экологически чистый район</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Вдали от промышленных предприятий</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <div>
+                <span class="font-semibold">Развитая инфраструктура</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Школы, детсады, магазины в 5 минутах</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-primary-600 mt-1 mr-3"></i>
+              <div>
+                <span class="font-semibold">Природные достопримечательности</span>
+                <p class="text-gray-600 dark:text-gray-300 text-sm">Лес, озеро и река в шаговой доступности</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="h-96 rounded-2xl overflow-hidden shadow-xl relative">
+          <div class="absolute inset-0 bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
+            <i class="fas fa-map-marked-alt text-5xl text-primary-600"></i>
+          </div>
+          <img src="images/карта.jpg" 
+               class="absolute w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-20 bg-white dark:bg-dark-800">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-bold">Галерея</h2>
+        <p class="text-gray-600 dark:text-gray-300 mt-4">
+          Посмотрите как выглядит наш посёлок и окружающая природа
+        </p>
+      </div>
+      
+      <div class="swiper gallery-swiper rounded-2xl overflow-hidden shadow-xl">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
+                 class="w-full h-96 object-cover">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" 
+                 class="w-full h-96 object-cover">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" 
+                 class="w-full h-96 object-cover">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" 
+             class="h-32 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
+        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" 
+             class="h-32 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
+        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" 
+             class="h-32 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf" 
+             class="h-32 w-full object-cover rounded-lg cursor-pointer hover:opacity-80 transition">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-primary-700 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Готовы стать нашим соседом?</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8 opacity-90">
+        Оставьте заявку и мы подберём для вас идеальный участок с учётом всех пожеланий
+      </p>
+      <button class="px-8 py-4 bg-white text-primary-700 rounded-full font-bold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
+        Оставить заявку
+      </button>
+    </div>
+  </section>
+
+  <section id="contacts" class="py-20 bg-white dark:bg-dark-800">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Контакты</h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-8">
+            Свяжитесь с нами любым удобным способом. Мы всегда рады ответить на ваши вопросы!
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-primary-100 dark:bg-primary-900/30 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-map-marker-alt text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Адрес</h4>
+                <p class="text-gray-600 dark:text-gray-300">Рязанская область, 15 км от города</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-primary-100 dark:bg-primary-900/30 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-phone-alt text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Телефон</h4>
+                <p class="text-gray-600 dark:text-gray-300">
+                  <a href="tel:+78001234567" class="hover:text-primary-600 transition">8 (800) 123-45-67</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-primary-100 dark:bg-primary-900/30 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-envelope text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Email</h4>
+                <p class="text-gray-600 dark:text-gray-300">
+                  <a href="mailto:info@lesnaya-gavan.ru" class="hover:text-primary-600 transition">info@lesnaya-gavan.ru</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-primary-100 dark:bg-primary-900/30 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-clock text-primary-600"></i>
+              </div>
+              <div>
+                <h4 class="font-bold">Часы работы</h4>
+                <p class="text-gray-600 dark:text-gray-300">Пн-Пт: 9:00 - 19:00</p>
+                <p class="text-gray-600 dark:text-gray-300">Сб-Вс: 10:00 - 17:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h4 class="font-bold mb-4">Мы в соцсетях</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900/30 transition">
+                <i class="fab fa-vk text-gray-700 dark:text-gray-300"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900/30 transition">
+                <i class="fab fa-telegram text-gray-700 dark:text-gray-300"></i>
+              </a>
+                <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900/30 transition">
+                <i class="fab fa-whatsapp text-gray-700 dark:text-gray-300"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-100 dark:hover:bg-primary-900/30 transition">
+                <i class="fab fa-youtube text-gray-700 dark:text-gray-300"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 dark:bg-dark-700 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-6">Остались вопросы?</h3>
+          <form class="space-y-4">
+            <div>
+              <label for="name" class="block mb-1">Ваше имя</label>
+              <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent dark:bg-dark-800">
+            </div>
+            <div>
+              <label for="phone" class="block mb-1">Телефон</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent dark:bg-dark-800">
+            </div>
+            <div>
+              <label for="message" class="block mb-1">Ваш вопрос</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent dark:bg-dark-800"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-bold">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-display font-bold mb-4">Лесная Гавань</h3>
+          <p class="text-gray-400">Премиальный коттеджный посёлок в экологически чистом районе</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Навигация</h4>
+          <ul class="space-y-2">
+            <li><a href="#about" class="text-gray-400 hover:text-white transition">О посёлке</a></li>
+            <li><a href="#plots" class="text-gray-400 hover:text-white transition">Участки</a></li>
+            <li><a href="#location" class="text-gray-400 hover:text-white transition">Расположение</a></li>
+            <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Галерея</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Контакты</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2 text-primary-400"></i>
+              <span>Рязанская обл., 15 км от города</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-2 text-primary-400"></i>
+              <a href="tel:+78001234567" class="hover:text-white transition">8 (800) 123-45-67</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-2 text-primary-400"></i>
+              <a href="mailto:info@lesnaya-gavan.ru" class="hover:text-white transition">info@lesnaya-gavan.ru</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500">© 2023 Коттеджный посёлок "Лесная Гавань". Все права защищены.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-vk"></i></a>
+          <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden">
+    <div class="bg-white dark:bg-dark-800 rounded-xl max-w-md w-full mx-4 p-8 relative">
+      <button id="modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+      <h3 class="text-2xl font-bold mb-6">Забронировать участок</h3>
+      <form class="space-y-4">
+        <div>
+          <label class="block mb-1">Выбранный участок</label>
+          <input type="text" id="modal-plot" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-dark-700" readonly>
+        </div>
+        <div>
+          <label for="modal-name" class="block mb-1">Ваше имя</label>
+          <input type="text" id="modal-name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent dark:bg-dark-800">
+        </div>
+        <div>
+          <label for="modal-phone" class="block mb-1">Телефон</label>
+          <input type="tel" id="modal-phone" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-transparent dark:bg-dark-800">
+        </div>
+        <button type="submit" class="w-full py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition font-bold">
+          Забронировать
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
